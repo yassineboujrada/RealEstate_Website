@@ -1,11 +1,11 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import {Home} from "@/components/Home";
 import Header from "./components/Header/Header";
+import Home from "./components/Home/home";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Home />
     </div>
     // <BrowserRouter>
     //   <Routes>
