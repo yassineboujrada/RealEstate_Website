@@ -1,6 +1,7 @@
 import Company from "./components/Companies/Company";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/home";
+import Residence from "./components/Residence/Residence";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Home />
       </div>
       <Company />
+      <Residence />
     </div>
   );
 }
