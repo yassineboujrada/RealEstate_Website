@@ -1,12 +1,14 @@
 import React from 'react'
 import './value.css'
+import { useState } from 'react'
 import { Accordion,AccordionItem,AccordionItemHeading,AccordionItemButton,AccordionItemPanel,AccordionItemState } from 'react-accessible-accordion'
 import 'react-accessible-accordion/dist/fancy-example.css'
 import {MdOutlineArrowDropDown} from 'react-icons/md'
 import data from '../../utils/accordion'
 
 const Value = () => {
-    const [classDecore,setClassDecore] = React.useState("collapsed")
+  const [classDecore,setClassDecore] = useState(null)
+
   return (
     <section className="v-wrapper">
         <div className="paddings innerWidth v-container flexCenter">
@@ -29,7 +31,7 @@ const Value = () => {
                                     <AccordionItemHeading>
                                         <AccordionItemButton className='flexCenter accordionButton'>
                                             <AccordionItemState>
-                                                {({ expanded }) => (expanded ? setClassDecore("expanded") : setClassDecore("collapsed"))}
+                                                {({ expanded }) => (expanded ? setClassDecore("collapsed") : setClassDecore("expanded"))}
                                             </AccordionItemState>
                                             <div className='flexCenter icon'>{item.icon}</div>
                                             <span className='primaryText'>{item.heading}</span>

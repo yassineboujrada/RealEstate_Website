@@ -11,8 +11,8 @@
 }
 
 .accordion{
+    border: none !important;
     margin-top: 2rem;
-    border: none;
 }
 
 .accordionItem{
