@@ -19,7 +19,7 @@ const Footer = () => {
         <section className="f-wrapper">
             <div className="f-container paddings innerWidth flexCenter">
                 <div className="flexColStart f-left">
-                    <img src='./logo2.png' alt='logo' width={120} />
+                    <img src='./logo.jpg' alt='logo' width={140} />
                     <span className='secondaryText'>
                         Our goal is to make people find they dream house <br />
                         Or find place to live
