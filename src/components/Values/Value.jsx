@@ -7,7 +7,11 @@ import {MdOutlineArrowDropDown} from 'react-icons/md'
 import data from '../../utils/accordion'
 
 const Value = () => {
-  const [classDecore,setClassDecore] = useState(null)
+  const [classDecore,setClassDecore] = useState(null);
+
+  const handleAccordionItemClick = (expanded) => {
+    setClassDecore(expanded ? 'collapsed' : 'expanded');
+  };
 
   return (
     <section className="v-wrapper">
@@ -29,15 +33,12 @@ const Value = () => {
                             return(
                                 <AccordionItem key={index} uuid={index} className={`accordionItem ${classDecore}`}>
                                     <AccordionItemHeading>
-                                        <AccordionItemButton className='flexCenter accordionButton'>
-                                            <AccordionItemState>
-                                                {({ expanded }) => (expanded ? setClassDecore("collapsed") : setClassDecore("expanded"))}
-                                            </AccordionItemState>
-                                            <div className='flexCenter icon'>{item.icon}</div>
-                                            <span className='primaryText'>{item.heading}</span>
-                                            <div className='flexCenter icon'>
-                                                <MdOutlineArrowDropDown size={20}/>
-                                            </div>
+                                    <AccordionItemButton className="flexCenter accordionButton" onClick={() => handleAccordionItemClick(item.expanded)} >
+                                        <div className="flexCenter icon">{item.icon}</div>
+                                        <span className="primaryText">{item.heading}</span>
+                                        <div className="flexCenter icon">
+                                            <MdOutlineArrowDropDown size={20} />
+                                        </div>
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
 
